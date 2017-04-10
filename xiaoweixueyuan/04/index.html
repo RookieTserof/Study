@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>垂直居中</title>
+</head>
+<style type="text/css">
+*{margin:0px;
+padding: 0px;}
+.div1{
+	
+
+height: 200px;
+width: 400px;
+background: #ccc;
+margin: auto;/*？理解不够？*/
+position: absolute;
+top: 0;left: 0;right: 0;bottom: 0;
+		
+}
+.div2{
+height: 50px;
+width: 50px;
+border-radius: 0 0 50px 0  ;
+background: #fc0;
+}
+.div3{
+height: 50px;
+width: 50px;
+border-radius: 50px 0 0 0  ;
+background: #fc0;
+position:relative;
+left:350px;
+top:100px;
+}
+</style>
+
+<body>
+<div class="div1">
+<div class="div2"></div>
+<div class="div3"></div>
+</div>
+</body>
+</html>
