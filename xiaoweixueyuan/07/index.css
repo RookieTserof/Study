@@ -360,15 +360,106 @@ float: left;
 .background_8{
 	height: 750px;
 	width: 1280px;
+	background:#fff;
+}
+.middle_8_word1{
+	font-size: 21px;
+	font-family: "SimHei";
+	text-align: center;
+	margin-top:120px; 
+}
+.middle_8_word2{
+	font-size: 12px;
+	color: #303030;
+	margin-top:25px; 
+	font-family: "Microsoft YaHei";
+	text-align: center;
+}
+.middle_8_part1{
+	width: 1000px;
+	height: 300px;
+	margin:110px auto;
+}
+.middle_8_part1_1{
+	width: 365px;
+	height: 300px;
+	float: left;
+
+}
+.middle_8_part1_2{
+	width: 635px;
+	height: 300px;
+
+		float: left;
+
+}
+.middle_8_part1_2_1{
+	width: 304px;
+	height: 40px;
+	background:#eee;
+	float: left;
+	margin-bottom: 15px;
+
+}
+.middle_8_part1_2_2{
+	width: 630px;
+	height: 120px;
+	background:#eee;
+	float: left;
+	margin-bottom: 15px;
+
+}
+
+.middle_8_part1_2_3{
+	width: 635px;
+	height: 40px;
+	background:#eee;
+	float: left;
+	
+
 }
 /*中间部分9*/
 .background_9{
 	height: 360px;
 	width: 1280px;
+	background:rgb(50,53,62);
+	text-align: center;
 }
+.middle_9_word2{
+	color:#fff;
+	font-size: 12px;
+	font-family: "SimSun";
+	padding:10px 0 30px 0;
 
+}
+.middle_9_word1{
+	color:#fff;
+	font-size: 21px;
+	font-family: "SimHei";
+	padding-top:90px;
+
+}
 /*底部*/
 .footer{
 height: 60px;
 width: 1280px;
+background:rgb(47,47,58);
+}
+.footer_part{
+	width: 1120px;
+	height: 30px;
+	padding-top: 30px;
+	margin:0 auto;
+}
+.footer_word1{
+	font-size: 12px;
+	color: #fff;
+	font-family: "SimSun";
+	float: left;
+}
+.footer_word2{
+	font-size: 12px;
+	color: #fff;
+	font-family: "SimSun";
+	float: right;
 }
