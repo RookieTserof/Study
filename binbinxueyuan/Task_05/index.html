@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>基础JavaScript练习（二)</title>
+	<style type="text/css">
+	li{display: inline-block;
+	background: red;
+	text-align: center;
+	font-size: 20px;
+	padding: 5px;
+	margin:5px;	
+
+	width: 50px;
+	list-style: none;
+	color: #fff;
+}
+
+
+	</style>
+</head>
+<body>
+<input type="text" name="" id="text_1"/>
+<input type="button" name="" value="左侧入" id="leftin" onclick="onclick1()" >
+<input type="button" name="" value="右侧入" id="rightin" onclick="onclick2()">
+<input type="button" name="" value="左侧出" id="leftout" onclick="onclick3()">
+<input type="button" name="" value="右侧出" id="rightin" onclick="onclick4()">
+<ul id="ul1">
+
+</ul>
+</body>
+<script type="text/javascript" >
+var text_1=document.getElementById('text_1')
+var oBtn1=document.getElementById("leftin")
+var oBtn2=document.getElementById("rightin")
+var oBtn3=document.getElementById("leftout")
+var oBtn4=document.getElementById("rightout")
+
+function onclick1(){
+if (text_1.value=="") {alert("请输入10到100中一个数字")}
+else if(!isNaN(text_1.value)&&parseInt(text_1.value)>9&&parseInt(text_1.value)<101){
+var  li=document.createElement("li");
+	li.innerHTML=text_1.value;
+	var i =parseInt(text_1.value)
+	li.style.height="ipx"
+	ul1.insertBefore(li,ul1.firstChild);//将生成的li元素从前方放入
+}else
+{alert("请输入10到100中一个数字")}
+}
+function onclick2(){
+if (text_1.value=="") {alert("请输入10到100中一个数字")}
+else if(!isNaN(text_1.value&&parseInt(text_1.value)>9&&parseInt(text_1.value)<101)){
+var  li=document.createElement("li");
+	li.innerHTML=text_1.value;
+	ul1.appendChild(li);//将生成的li元素从前方放入
+}else
+{alert("请输入10到100中一个数字")}
+}
+function onclick3(){
+	ul1.removeChild(ul1.firstChild);
+
+}
+function onclick4(){
+	ul1.removeChild(ul1.lastChild);
+}
+</script>
+</html>
+
+	
