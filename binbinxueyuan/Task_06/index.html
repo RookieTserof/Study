@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>基础JavaScript练习（二)</title>
+	<style type="text/css">
+	li{display: inline-block;
+	background: red;
+	text-align: center;
+	font-size: 20px;
+	padding: 30px;
+	margin:5px;	
+
+	list-style: none;
+	color: #fff;
+}
+
+/*基于任务四进行升级
+
+将新元素输入框从input改为textarea
+
+允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔
+
+增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查询词为ab或bc，则该内容需要标识
+	</style>
+</head>
+<body>
+<textarea id="text_1" placeholder="可以输入数字，中文，英文等等" cols="50" rows="10" ></textarea>
+<input type="button" name="" value="左侧入" id="leftin" onclick="onclick1()" >
+<input type="button" name="" value="右侧入" id="rightin" onclick="onclick2()">
+<input type="button" name="" value="左侧出" id="leftout" onclick="onclick3()">
+<input type="button" name="" value="右侧出" id="rightin" onclick="onclick4()">
+<input type="text" placeholder="查找" id="searchText">
+<input type="button" value="查找" id="search"> 
+<ul id="ul1">
+
+</ul>
+
+</body>
+<script type="text/javascript" >
+var text_1=document.getElementById('text_1')
+var oBtn1=document.getElementById("leftin")
+var oBtn2=document.getElementById("rightin")
+var oBtn3=document.getElementById("leftout")
+var oBtn4=document.getElementById("rightout")
+
+function onclick1(){
+var text_1_value=document.getElementById("text_1").value;
+if (text_1_value.length>0) {
+var inputArray =text_1_value.split(/,|，|、|\s|\r/);//可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔?
+for (var i = inputArray.length - 1; i >= 0; i--) {
+	var li=document.createElement("li");
+	li.innerHTML=inputArray[i];
+	ul1.insertBefore(li,ul1.firstChild);
+}
+}
+else{alert("请输入数字、中文、英文等")}
+}
+
+
+function onclick2(){
+var text_1_value=document.getElementById("text_1").value;
+if (text_1_value.length>0) {
+var inputArray =text_1_value.split(/,|，|、|\s|\r/);//可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔?
+for (var i = 0; i <inputArray.length ; i++) {
+	var li=document.createElement("li");
+	li.innerHTML=inputArray[i];
+	ul1.appendChild(li);
+}
+}
+else{alert("请输入数字、中文、英文等")}
+}
+function onclick3(){
+	ul1.removeChild(ul1.firstChild);
+
+}
+function onclick4(){
+	ul1.removeChild(ul1.lastChild);
+}
+</script>
+</html>
+
+	
