@@ -30,7 +30,7 @@
 <input type="button" name="" value="左侧出" id="leftout" onclick="onclick3()">
 <input type="button" name="" value="右侧出" id="rightin" onclick="onclick4()">
 <input type="text" placeholder="查找" id="searchText">
-<input type="button" value="查找" id="search"> 
+<input type="button" value="查找" id="search" onclick="search()"> 
 <ul id="ul1">
 
 </ul>
@@ -42,6 +42,7 @@ var oBtn1=document.getElementById("leftin")
 var oBtn2=document.getElementById("rightin")
 var oBtn3=document.getElementById("leftout")
 var oBtn4=document.getElementById("rightout")
+var ul1=document.getElementById("ul1")
 
 function onclick1(){
 var text_1_value=document.getElementById("text_1").value;
@@ -76,6 +77,7 @@ function onclick3(){
 function onclick4(){
 	ul1.removeChild(ul1.lastChild);
 }
+
 function search(){
 var search_value=document.getElementById("searchText").value;
  var pat1 = new RegExp("\w*"+search_value+"\w*");
