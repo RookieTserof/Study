@@ -76,6 +76,19 @@ function onclick3(){
 function onclick4(){
 	ul1.removeChild(ul1.lastChild);
 }
+function search(){
+var search_value=document.getElementById("searchText").value;
+ var pat1 = new RegExp("\w*"+search_value+"\w*");
+ var listNodes =document.getElementsByTagName("li");
+ for(var i=0;i < listNodes.length;i++){
+            var matches = listNodes[i].innerHTML;
+            if(pat1.test(matches)){
+                listNodes[i].style.backgroundColor="green";
+            }else{
+                listNodes[i].style.backgroundColor="red";
+            }
+        }
+}
 </script>
 </html>
 
